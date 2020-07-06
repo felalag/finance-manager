@@ -1,0 +1,39 @@
+<mdb-navbar id="navbar" SideClass="navbar navbar-expand-lg navbar-dark indigo" mdbStickyHeader>
+
+    <mdb-navbar-brand><a class="navbar-brand" routerLink="/home-component">Finance Manager</a></mdb-navbar-brand>
+
+    <links>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link waves-light" routerLink="/home-component" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-light" routerLink="/home-component" mdbWavesEffect>Deposits Calculator</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ml-auto nav-flex-icons">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home-component">
+            <mdb-icon fab icon="twitter"></mdb-icon>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home-component">
+            <mdb-icon fab icon="google-plus"></mdb-icon>
+          </a>
+        </li>
+
+        <li class="nav-item dropdown" dropdown>
+          <a dropdownToggle type="button" class="nav-link dropdown-toggle waves-light">
+            <mdb-icon fas icon="user"></mdb-icon> Profile<span class="caret"></span></a>
+          <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
+            <a class="dropdown-item waves-light" routerLink="/home-component">My account</a>
+            <div class="divider dropdown-divider"></div>
+            <a class="dropdown-item waves-light" routerLink="/home-component">Log out</a>
+          </div>
+        </li>
+      </ul>
+    </links>
+
+</mdb-navbar>
