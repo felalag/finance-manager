@@ -7,10 +7,14 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
+import {ErrorNotificationModalComponent} from './error-notification-modal/error-notification-modal.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ErrorNotificationModalComponent
+  ],
   imports: [
     CommonModule,
     MDBBootstrapModule.forRoot(),
@@ -19,7 +23,8 @@ import {MatCardModule} from '@angular/material/card';
     MatButtonModule,
     MatInputModule,
     MatToolbarModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule
   ],
   exports: [
     MDBBootstrapModule,
