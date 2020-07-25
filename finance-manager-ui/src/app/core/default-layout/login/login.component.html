@@ -5,13 +5,13 @@
       <span>Login</span>
     </mat-toolbar>
 
-    <form class="row flex-column px-3">
+    <form class="row flex-column px-3" (ngSubmit)="login(credentials)">
       <mat-form-field class="col-12">
-        <input matInput type="email" placeholder="Email">
+        <input matInput type="text" placeholder="Username" name="username" [(ngModel)]="credentials.username">
       </mat-form-field>
 
       <mat-form-field class="col-12">
-        <input matInput type="password" placeholder="User">
+        <input matInput type="password" placeholder="Password" name="password" [(ngModel)]="credentials.password">
       </mat-form-field>
 
       <div class="col-12">
