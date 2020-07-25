@@ -1,6 +1,5 @@
 package by.felalag.financemanagerapi.config;
 
-import by.felalag.financemanagerapi.entity.User;
 import by.felalag.financemanagerapi.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -16,10 +15,7 @@ public class DaoUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = userRepository.findByUsername(username);
-        if (user == null) {
-            throw new UsernameNotFoundException(String.format("Requested user %s does not exist.", username));
-        }
-        return user;
+        return userRepository.findByUsername(username)
+                .orElseThrow(() -> new UsernameNotFoundException(String.format("Requested user %s does not exist.", username)));
     }
 }
