@@ -12,6 +12,8 @@ import {SuccessfulLoginResponse} from '../../../shared/model/wrapper/SuccessfulL
 })
 export class LoginComponent implements OnInit {
 
+  hidePassword: boolean = true;
+
   credentials: LoginRequest = {
     username: null,
     password: null

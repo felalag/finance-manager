@@ -8,6 +8,7 @@ import {RouterModule} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {RegisterComponent} from './default-layout/register/register.component';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {RegisterComponent} from './default-layout/register/register.component';
     HttpClientModule,
     SharedModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    MatIconModule
   ],
   exports: [
     HomeComponent,

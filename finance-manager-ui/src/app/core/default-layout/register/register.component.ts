@@ -10,6 +10,8 @@ import {RegistrationRequest} from '../../../shared/model/wrapper/RegistrationReq
 })
 export class RegisterComponent implements OnInit {
 
+  hidePassword: boolean = true;
+
   user: RegistrationRequest = {
     username: null,
     email: null,
